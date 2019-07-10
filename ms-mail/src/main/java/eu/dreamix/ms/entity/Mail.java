@@ -17,9 +17,18 @@ public class Mail {
     @Email
     @NotNull
     @Size(min = 1, message = "Please, set an email address to send the message to it")
+    @Column(name = "to_user")
     private String to;
     private String subject;
     private String text;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTo() {
         return to;
