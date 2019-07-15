@@ -38,6 +38,7 @@ public class ResourceConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 // allow registering
                 .antMatchers(HttpMethod.POST, "/members").permitAll()
+                .antMatchers(HttpMethod.GET, "/members").permitAll()
                 // restrict access to authenticated users
                 .antMatchers("/**").authenticated();
     }

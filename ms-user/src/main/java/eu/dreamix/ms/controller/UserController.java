@@ -27,7 +27,7 @@ public class UserController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    //@PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @RequestMapping(method = RequestMethod.GET, path = "/members")
     public ResponseEntity<Iterable<User>> getAll() {
         Iterable<User> all = userService.findAll();
